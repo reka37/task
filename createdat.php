@@ -1,25 +1,12 @@
 <?php
+use yii\helpers\StringHelper;
 $word = 'created_at';
+$array_word = \yii\helpers\StringHelper::explode($word, '_');
+$str = '';
 
-class TransformWord {
-	private $word;
-	
-	public function __construct($word){
-	 $this->word = $word;
-	}
-	
-	public function transform(){
-		$arr = explode('_', $this->word);
-		$arr_result = array();
-		
-		foreach ($arr as $key => $result) {	
-				$arr_result[] = ucfirst($result)	
-		}
-		$word_result = implode('', $arr_result);
-		return $word_result;
-	}
+foreach ($array_word as $word) {
+	$word = \yii\helpers\StringHelper::mb_ucfirst($word);
+	$str .= $word;
 }
-
-$word_final = new TransformWord($word);
-echo $word_final->transform();
+echo $str;
 ?>
