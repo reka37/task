@@ -1,4 +1,6 @@
 <?php
+
+
 $word = 'Купи слона';
 
 class TranslitWord {
