@@ -2,6 +2,7 @@
 use yii\grid\GridView;
 use yii\data\ArrayDataProvider;
 
+Yii::$app->formatter->nullDisplay = 'ÐÐµ Ð·Ð°Ð´Ð°Ð½Ð¾';
 
 $data = [
     ['id' => 1, 'name' => 'name 1'],
@@ -21,6 +22,6 @@ $provider = new ArrayDataProvider([
 
 echo GridView::widget([
     'dataProvider' => $provider,
-	'formatter' => ['class' => 'yii\i18n\Formatter','nullDisplay' => '[íåò äàííûõ]'],
+	//'formatter' => ['class' => 'yii\i18n\Formatter','nullDisplay' => '[Ð½ÐµÑ‚ Ð´Ð°Ð½Ð½Ñ‹Ñ…]'],
 ])
 ?>
