@@ -1,4 +1,5 @@
 <?php
+
 use yii\grid\GridView;
 use yii\data\ArrayDataProvider;
 
@@ -24,4 +25,3 @@ echo GridView::widget([
     'dataProvider' => $provider,
 	//'formatter' => ['class' => 'yii\i18n\Formatter','nullDisplay' => '[нет данных]'],
 ])
-?>
